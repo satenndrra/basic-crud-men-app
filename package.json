@@ -1,0 +1,19 @@
+{
+  "name": "wallapp",
+  "version": "1.0.0",
+  "description": "Basic app using Mongo,Express and Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chamsudhir/basic-crud-men-app.git"
+  },
+  "author": "Sudheer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chamsudhir/basic-crud-men-app/issues"
+  },
+  "homepage": "https://github.com/chamsudhir/basic-crud-men-app#readme"
+}
