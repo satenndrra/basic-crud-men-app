@@ -1,0 +1,23 @@
+
+        <h1>Sudheer's wall</h1>
+        <h2>Please </h2>
+        
+        <h2>Add a Quotes to the List</h2>
+        <form action='/addQ' method='POST'>
+            <input type='text' name='name'/>
+            <input type='text' name='message'/>
+            <button>Submit</button>
+        </form>
+<h1>Filter quotes for a Particular User</h1>
+<form action='/query' method='POST'>
+    <input type='text' placeholder='enter the name you want the quote for' name='fname'>
+    <button>Filter with name</button>
+</form>
+<ul>
+            <% for(var i=0;i<quotes.length;i++){%>
+            <li>
+                <span><%= quotes[i].name %></span>
+                <span><%= quotes[i].message %></span>
+            </li>
+            <% } %>
+        </ul>

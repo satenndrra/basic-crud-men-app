@@ -1,0 +1,17 @@
+
+        <h1>Sudheer's wall</h1>
+        <form action='/home' method='POST'>
+            <button>Home</button>
+        </form>
+        <h1>Update or delete the reuired Quote</h1>
+     
+        
+        
+        <ul>
+    <% for(var i=0; i<quotes.length; i++) {%>
+        <li>
+            <span><%= quotes[i].name %></span>
+            <span><%= quotes[i].message %></span> 
+        </li>
+    <% } %>
+</ul>
