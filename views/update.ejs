@@ -11,7 +11,15 @@
     <% for(var i=0; i<quotes.length; i++) {%>
         <li>
             <span><%= quotes[i].name %></span>
-            <span><%= quotes[i].message %></span> 
+            <span><%= quotes[i].message %></span>
+            <form action='/deleteQ' method='POST'>
+                <button name='deleteB' value='<%= quotes[i].message %>'>Delete Quote</button>
+            </form>
+            <form action='/updateQ' method='POST'>
+                <input type='text' placeholder='please update the message' name='updatedQ'>
+                <button name='updateB' value='<%= quotes[i].message %>'>update Quote</button>
+            </form>
+            
         </li>
     <% } %>
 </ul>

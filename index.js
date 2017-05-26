@@ -1,7 +1,7 @@
 // require express and body parser modules//
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const path=require('path');
 // creating mongo instance//
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://chamsudhir-wallapp-4894806:27017/newdb';
@@ -9,7 +9,7 @@ const url = 'mongodb://chamsudhir-wallapp-4894806:27017/newdb';
 
 // creating the app server using function express //
 const app = express();
-
+app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.urlencoded({extended : true}));
 app.set('view engine', 'ejs');
 //connect to mongodb//
@@ -58,5 +58,14 @@ MongoClient.connect(url, function(err,db){
                res.render('update.ejs', {quotes: result}); 
             });        
         });
-    
+        app.post('/deleteQ', function(req, res) {
+            console.log("in deleteQ");
+            console.log(fnameO +' ' + req.body.deleteB);
+            db.collection('quotes').remove({name: fnameO,message: req.body.deleteB});
+            res.redirect('/update');
+        });
+        app.post('/updateQ', function(req, res) {
+           db.collection('quotes').update({name: fnameO,message: req.body.updateB}, {name: fnameO,message: req.body.updatedQ});
+           res.redirect('/update');
+        });
 });
