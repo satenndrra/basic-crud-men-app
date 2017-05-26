@@ -4,7 +4,13 @@ const bodyParser = require('body-parser');
 const path=require('path');
 // creating mongo instance//
 const MongoClient = require('mongodb').MongoClient;
+
+// c9 local mongodb url
+//const url = 'mongodb://chamsudhir-wallapp-4894806:27017/newdb';
+
+// heroku mongodb url
 const url = 'mongodb://chamsudhir-wallapp-4894806:27017/newdb';
+
 
 
 // creating the app server using function express //
