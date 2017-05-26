@@ -2,6 +2,9 @@
   "name": "wallapp",
   "version": "1.0.0",
   "description": "Basic app using Mongo,Express and Node",
+  "engines": {
+    "node": "7.10.0"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +27,5 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
-  },
-  
-  "engine": "node 7.10.0"
+  }
 }
