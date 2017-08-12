@@ -1,6 +1,2 @@
 # basic-crud-men-app
-Basic app using Mongo, Express and Node
-It is a small app that allows people to make changes
-
-*App temporarily hosted on c9
-https://wallapp-chamsudhir.c9users.io/
+Basic CRUD app using Mongo/ Express/ Node that allows visitors to post comments on a public wall.
